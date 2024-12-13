@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>찰떡콩떡</title>
+    <link rel="stylesheet" href="stylesix.css">
+</head>
+<style>
+    ul {
+        font-size: 25px;
+    }
+    .map img{
+        display: block;
+        margin: auto;
+        margin-top: -560px;
+    }
+
+    /* 마을정보를 보여주는 모달창 관련 스타일 */
+    #modal1 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(인절미_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    .close-button {
+        position: absolute;
+        top: 55px;
+        right: 120px;
+        width: 30px;
+        height: 30px;
+        background: url(close.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    #modal2 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(꽃송콩송_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    #modal3 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(찹쌀떡_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    #modal4 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info4 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(시루떡_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    #modal5 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info5 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(무지개떡_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    #modal6 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info6 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(망개떡_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    #modal7 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info7 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(꿀떡_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    #modal8 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info8 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(호떡_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    #modal9 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info9 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(약밥_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    #modal10 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info10 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(감자떡_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+    #modal11 {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 10000;
+    }
+    #info11 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 400px;
+        background: url(술떡_집.png);
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+    }
+</style>
+<body>
+    <script src="button.js">     
+    </script>
+
+    <!-- 마을정보를 보여주는 모달창 영역 -->
+    <div id="modal1">
+        <div id="info1">
+            <div class="close-button"></div>
+        </div>
+    </div>
+    <div id="modal2">
+        <div id="info2">
+            <div class="close-button"></div>
+        </div>
+    </div>
+    <div id="modal3">
+        <div id="info3">
+            <div class="close-button"></div>
+        </div>
+    </div>
+    <div id="modal4">
+        <div id="info4">
+            <div class="close-button"></div>
+        </div>
+    </div>
+    <div id="modal5">
+        <div id="info5">
+            <div class="close-button"></div>
+        </div>
+    </div>
+    <div id="modal6">
+        <div id="info6">
+            <div class="close-button"></div>
+        </div>
+    </div>
+    <div id="modal7">
+        <div id="info7">
+            <div class="close-button"></div>
+        </div>
+    </div>
+    <div id="modal8">
+        <div id="info8">
+            <div class="close-button"></div>
+        </div>
+    </div>
+    <div id="modal9">
+        <div id="info9">
+            <div class="close-button"></div>
+        </div>
+    </div>
+    <div id="modal10">
+        <div id="info10">
+            <div class="close-button"></div>
+        </div>
+    </div>
+    <div id="modal11">
+        <div id="info11">
+            <div class="close-button"></div>
+        </div>
+    </div>
+            
+    <div class="container">
+        <div class="headerbg">
+        <div class="header">
+            <a href="main.html"><img src="타이틀 로고만.png" width="160%" height="750%"></a> <!-- 타이틀 제목 -->
+        <div class="nav">
+         <nav class="menu-1">
+            <ul>
+                <li>
+                    <a>게임소개</a>
+                    <ul>
+                        <li><a href="two.html">요리</a></li>
+                        <li><a href="three.html">도감</a></li>
+                    </ul>
+                </li>
+                <li><a href="four.html">스토리</a></li>
+                <li><a href="five.html">캐릭터</a></li>
+                <li><a href="six.html">맵</a></li>
+            </ul>
+         </nav>
+        </div>
+        </div>
+        </div>
+        <div class="meow1">
+            <h2>Map</h2>
+        </div>
+        </div>
+    </div>
+
+    <div class="map">
+        <img src="건물O.png" usemap="#image-map">
+
+        <!-- data-original-coords 추가 -->
+        <map name="image-map">
+            <area id="인절미" target="" alt="Area1" title="" coords="494,680,34" shape="circle" data-original-coords="494,680,34">
+            <area id="꽃송콩송" target="" alt="Area2" title="" coords="744,727,35" shape="circle" data-original-coords="744,727,35">
+            <area id="찹쌀떡" target="" alt="Area3" title="" coords="1008,809,39" shape="circle" data-original-coords="1008,809,39">
+            <area id="시루떡" target="" alt="Area4" title="" coords="1100,488,38" shape="circle" data-original-coords="1100,488,38">
+            <area id="무지개떡" target="" alt="Area5" title="" coords="1415,512,37" shape="circle" data-original-coords="1415,512,37">
+            <area id="망개떡" target="" alt="Area6" title="" coords="1186,278,38" shape="circle" data-original-coords="1186,278,38">
+            <area id="꿀떡" target="" alt="Area8" title="" coords="856,215,38" shape="circle" data-original-coords="856,215,38">
+            <area id="호떡" target="" alt="Area9" title="" coords="667,137,36" shape="circle" data-original-coords="667,137,36">
+            <area id="약밥" target="" alt="Area10" title="" coords="328,271,37" shape="circle" data-original-coords="328,271,37">
+            <area id="감자떡" target="" alt="Area11" title="" coords="376,483,37" shape="circle" data-original-coords="376,483,37">
+            <area id="술떡" target="" alt="Area12" title="" coords="671,483,40" shape="circle" data-original-coords="671,483,40">
+        </map>
+    </div>
+
+    <div class="meow">
+        <h2>~찰떡콩떡 마을~</h2>
+        <p>클릭해서 찰떡콩떡 마을을 살펴보세요</p>
+    </div>
+    <div class="fin">
+        <p>project by 김수현, 이효령, 장선빈, 정윤하</p>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- 마을 클릭하면 마을정보를 보여주는 모달창 활성화. jQuery 라이브러리 사용 -->
+    <script>
+        $('#인절미').click(function(){
+            //alert("OK!");
+            $('#modal1').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal1').css('display', 'none');
+        });
+        $('#꽃송콩송').click(function(){
+            //alert("OK!");
+            $('#modal2').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal2').css('display', 'none');
+        });
+        $('#찹쌀떡').click(function(){
+            //alert("OK!");
+            $('#modal3').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal3').css('display', 'none');
+        });
+        $('#시루떡').click(function(){
+            //alert("OK!");
+            $('#modal4').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal4').css('display', 'none');
+        });
+        $('#무지개떡').click(function(){
+            //alert("OK!");
+            $('#modal5').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal5').css('display', 'none');
+        });
+        $('#망개떡').click(function(){
+            //alert("OK!");
+            $('#modal6').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal6').css('display', 'none');
+        });
+        $('#꿀떡').click(function(){
+            //alert("OK!");
+            $('#modal7').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal7').css('display', 'none');
+        });
+        $('#호떡').click(function(){
+            //alert("OK!");
+            $('#modal8').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal8').css('display', 'none');
+        });
+        $('#약밥').click(function(){
+            //alert("OK!");
+            $('#modal9').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal9').css('display', 'none');
+        });
+        $('#감자떡').click(function(){
+            //alert("OK!");
+            $('#modal10').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal10').css('display', 'none');
+        });
+        $('#술떡').click(function(){
+            //alert("OK!");
+            $('#modal11').css('display', 'block');
+        });
+        $('.close-button').click(function(){
+            $('#modal11').css('display', 'none');
+        });
+    ㄴ</script>
+
+    <!-- 이미지에 맞춰 좌표 위치조정 스크립트 추가 -->
+    <script>
+        function resizeMap() {
+            const image = document.querySelector('.map img'); //style 이미지 이름
+            const map = document.querySelector('map[name="image-map"]'); // html 위치좌표 이름
+            const originalWidth = 1920; // 원래 이미지 너비
+            const originalHeight = 1080; // 원래 이미지 높이
+
+            const currentWidth = image.clientWidth;
+            const currentHeight = image.clientHeight;
+
+            const widthRatio = currentWidth / originalWidth;
+            const heightRatio = currentHeight / originalHeight;
+
+            const areas = map.querySelectorAll('area');
+            areas.forEach(area => {
+                const originalCoords = area.dataset.originalCoords.split(',').map(Number);
+                const newCoords = originalCoords.map((coord, index) =>
+                    index % 2 === 0 ? coord * widthRatio : coord * heightRatio
+                );
+                area.coords = newCoords.join(',');
+            });
+        }
+
+        window.addEventListener('load', resizeMap);
+        window.addEventListener('resize', resizeMap);
+    </script>
+    
+</body>
+
+</html>
