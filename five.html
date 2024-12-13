@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>찰떡콩떡</title>
+    <link rel="stylesheet" href="stylefive.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Slick Carousel JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(function () {
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 5, /* 슬라이드 썸네일 5개 표시 */
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: true,
+                centerMode: true,
+                focusOnSelect: true
+            });
+        });
+    </script>
+    <style>
+        ul {
+            font-size: 25px;
+        }
+        .slider-for,
+        .slider-nav {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        .slider-for div {
+        background: #ddd;
+        text-align: center;
+        line-height: 400px;
+        height: 400px;
+        font-size: 20px;
+        }
+
+        .slider-nav div {
+            background: #ddd;
+            text-align: center;
+            line-height: 200px;
+            height: 200px;
+            font-size: 20px;
+        }
+         /* 화살표 스타일 추가 */
+         .slick-prev, .slick-next {
+    background: orange; /* 배경은 투명으로 설정 */
+    color: orange; /* 아이콘의 색상을 오렌지로 변경 */
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+}
+        .slick-prev {
+            left: -80px;  /* 이전 화살표 위치 */
+        }
+
+        .slick-next {
+            right: -80px;  /* 다음 화살표 위치 */
+        }
+
+        .slick-prev:hover,
+        .slick-next:hover {
+            color: orange;  /* 호버 시 화살표 색상 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="headerbg">
+            <div class="header">
+                <a href="main.html"><img src="타이틀 로고만.png" width="160%" height="750%"></a>
+                <div class="nav">
+                    <nav class="menu-1">
+                        <ul>
+                            <li>
+                                <a>게임소개</a>
+                                <ul>
+                                    <li><a href="two.html">요리</a></li>
+                                    <li><a href="three.html">도감</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="four.html">스토리</a></li>
+                            <li><a href="five.html">캐릭터</a></li>
+                            <li><a href="six.html">맵</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="meow1">
+            <h2>Characters</h2>
+        </div>
+        <div class="mainSlide">
+            <!-- 메인 슬라이드 -->
+            <div class="slider-for">
+                <div><img src="꽃송_소개.png" alt="슬라이드 1 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="콩송_소개.png" alt="슬라이드 2 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="감자떡_소개.png" alt="슬라이드 3 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="밤떡_소개.png" alt="슬라이드 4 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="술떡_소개.png" alt="슬라이드 5 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="호떡_소개.png" alt="슬라이드 6 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="꿀떡_소개.png" alt="슬라이드 7 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="경단일_소개.png" alt="슬라이드 8 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="경단이_소개.png" alt="슬라이드 9 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="경단삼_소개.png" alt="슬라이드 10 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="약밥_소개.png" alt="슬라이드 11 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="쑥떡_소개.png" alt="슬라이드 12 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="망개떡_소개.png" alt="슬라이드 13 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="시루떡_소개.png" alt="슬라이드 14 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="인절미_소개.png" alt="슬라이드 15 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="백설기_소개.png" alt="슬라이드 16 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="찹쌀떡_소개.png" alt="슬라이드 17 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+                <div><img src="무지개떡_소개.png" alt="슬라이드 18 이미지" style="width:100%; height:400px; object-fit:cover;"></div>
+            </div>
+            <!-- 네비게이션 슬라이드 -->
+            <div class="slider-nav">
+                <div><img src="꽃송.png" alt="썸네일 1" style="width:100%; height:100%;"></div>
+                <div><img src="콩송.png" alt="썸네일 2" style="width:100%; height:100%;"></div>
+                <div><img src="감자떡.png" alt="썸네일 3" style="width:100%; height:100%;"></div>
+                <div><img src="밤떡.png" alt="썸네일 4" style="width:100%; height:100%;"></div>
+                <div><img src="술떡.png" alt="썸네일 5" style="width:100%; height:100%;"></div>
+                <div><img src="호떡.png" alt="썸네일 6" style="width:100%; height:100%;"></div>
+                <div><img src="꿀떡.png" alt="썸네일 7" style="width:100%; height:100%;"></div>
+                <div><img src="경단일.png" alt="썸네일 8" style="width:100%; height:100%;"></div>
+                <div><img src="경단이.png" alt="썸네일 9" style="width:100%; height:100%;"></div>
+                <div><img src="경단삼.png" alt="썸네일 10" style="width:100%; height:100%;"></div>
+                <div><img src="약밥.png" alt="썸네일 11" style="width:100%; height:100%;"></div>
+                <div><img src="쑥떡.png" alt="썸네일 12" style="width:100%; height:100%;"></div>
+                <div><img src="망개떡.png" alt="썸네일 13" style="width:100%; height:100%;"></div>
+                <div><img src="시루떡.png" alt="썸네일 14" style="width:100%; height:100%;"></div>
+                <div><img src="인절미.png" alt="썸네일 15" style="width:100%; height:100%;"></div>
+                <div><img src="백설기.png" alt="썸네일 16" style="width:100%; height:100%;"></div>
+                <div><img src="찹쌀떡.png" alt="썸네일 17" style="width:100%; height:100%;"></div>
+                <div><img src="무지개떡.png" alt="썸네일 18" style="width:100%; height:100%;"></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="fin">
+        <p>project by 김수현, 이효령, 장선빈, 정윤하</p>
+    </div>
+</body>
+</html>
