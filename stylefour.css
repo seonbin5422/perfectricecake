@@ -1,0 +1,116 @@
+@font-face {
+  font-family: 'HakgyoansimDunggeunmisoTTF-B';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimDunggeunmisoTTF-B.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Ownglyph_ParkDaHyun';
+  src: url('온글잎 박다현체.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+  body {
+	font-family: 'Ownglyph_ParkDaHyun';
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: url(Group\ 50.png);
+  background-size:100%;
+  background-repeat: no-repeat;
+}
+.container .headerbg{
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.container .header{
+  width: 80%;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .header a{
+  width: 10%;
+  height: 10%;
+  margin:0;
+  margin-bottom: 4%;
+}
+a {
+  color:inherit;
+  text-decoration: inherit;
+}
+.menu-1>ul{
+  list-style: none;
+  display: inline-block;
+}
+.menu-1>ul>li{
+  display:inline-block;
+  padding: 30px;
+  color: black;
+}
+.menu-1 ul li a:hover{
+  color:orange;
+}
+.menu-1 li{
+  position: relative;
+  list-style: none;
+  padding: 5px;
+}
+.menu-1 ul ul{
+  display:none;
+  position: absolute;
+  background-color: orange;
+  padding: 15px;
+  border-radius: 5px;
+}
+.menu-1 ul ul li a:hover{
+  color: white;
+}
+.menu-1 li:hover > ul{
+  display: block;
+}
+.meow1 {
+  text-align: center;
+  padding-top: 80px;
+}
+.meow1 h2{
+  font-family: 'HakgyoansimDunggeunmisoTTF-B';
+  font-size: 65px;
+  color: saddlebrown;
+}
+.meow {
+  text-align: center;
+  padding: 15px;
+}
+.meow p{
+  font-family: 'Ownglyph_ParkDaHyun';
+   font-size: 20px;
+   color: black;
+}
+.fin{
+  text-align: center;
+  background-color: orange;
+  height:50px;
+}
+.fin p{
+  font-family:'Ownglyph_ParkDaHyun';
+  font-size: 15px;
+  padding-top: 20px;
+  color: black;
+}
+.img {
+  text-align: center;
+}
